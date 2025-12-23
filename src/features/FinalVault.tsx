@@ -18,11 +18,6 @@ export const FinalVault: React.FC = () => {
                 </h2>
                 <div className="h-px w-32 bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent mx-auto mb-8"></div>
 
-                <p className="text-xl mb-8 font-serif text-[var(--color-text)] leading-relaxed relative z-10">
-                    You have successfully navigated the history of London.
-                    <br />
-                    Platform 9 ¾ awaits you at King's Cross.
-                </p>
                 <div className="relative z-10 max-w-2xl mx-auto">
                     <img
                         src="/LondonsCallingJaroLeto2026.jpg"
@@ -30,6 +25,12 @@ export const FinalVault: React.FC = () => {
                         className="w-full h-auto rounded-lg shadow-2xl animate-float filter drop-shadow-[0_0_20px_rgba(255,215,0,0.3)]"
                     />
                 </div>
+
+                <p className="text-xl mb-8 font-serif text-[var(--color-text)] leading-relaxed relative z-10">
+                    You have successfully navigated the history of London.
+                    <br />
+                    Platform 9 ¾ awaits you at King's Cross.
+                </p>
             </div>
         );
     }
