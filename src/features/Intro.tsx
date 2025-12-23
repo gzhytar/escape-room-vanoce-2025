@@ -6,40 +6,42 @@ export const Intro: React.FC = () => {
     const { startGame } = useGame();
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4">
-            <div className="max-w-2xl w-full bg-[#f0e6d2] text-[#2a2a2a] p-8 md:p-12 rounded-lg shadow-2xl transform rotate-1 relative animate-fade-in">
+        <div className="min-h-screen flex items-center justify-center p-4 bg-black/40">
+            <div className="max-w-2xl w-full glass-panel p-10 md:p-14 rounded-xl border border-[var(--color-gold-dim)] transform rotate-1 relative animate-fade-in text-center overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+
+                {/* Mystic Background */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,14,14,0.2),transparent)] pointer-events-none"></div>
+
                 {/* Decorations */}
-                <div className="absolute top-4 left-4 text-[#4a0e0e] opacity-20">
-                    <Sparkles size={48} />
+                <div className="absolute top-6 left-6 text-[var(--color-gold-dim)] opacity-30 animate-pulse-glow">
+                    <Sparkles size={40} />
                 </div>
-                <div className="absolute bottom-4 right-4 text-[#4a0e0e] opacity-20">
-                    <Scroll size={48} />
+                <div className="absolute bottom-6 right-6 text-[var(--color-gold-dim)] opacity-30 animate-pulse-glow" style={{ animationDelay: '1s' }}>
+                    <Scroll size={40} />
                 </div>
 
-                <div className="text-center font-serif">
-                    <h2 className="text-[#4a0e0e] text-xl font-bold uppercase tracking-widest mb-2 font-heading">
-                        Ministry of Magic
+                <div className="font-serif relative z-10">
+                    <h2 className="text-[var(--color-gold)] text-lg font-bold uppercase tracking-[0.3em] mb-4 font-heading border-b border-[var(--color-gold-dim)] inline-block pb-1">
+                        Ministry of Magic Decree
                     </h2>
-                    <div className="h-px w-32 bg-[#4a0e0e] mx-auto mb-8 opacity-50"></div>
 
-                    <h1 className="text-4xl md:text-5xl font-bold mb-8 text-[#4a0e0e] font-magic">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-8 font-magic text-gradient-gold drop-shadow-lg leading-tight mt-4">
                         The Alchemist's London
                     </h1>
 
-                    <div className="text-lg leading-relaxed mb-8 font-body font-medium italic">
-                        <p className="mb-4">
+                    <div className="text-xl leading-relaxed mb-10 font-body text-gray-300 italic">
+                        <p className="mb-6">
                             "A magical fog has descended upon the city, freezing time itself. To break the spell and return to the Muggle world, you must traverse the history and magic of London."
                         </p>
-                        <p>
-                            "Find the 12 hidden letters to form the password for the Golden Snitch."
+                        <p className="text-[var(--color-text)] font-semibold">
+                            Find the 12 hidden letters to form the password for the Golden Snitch.
                         </p>
                     </div>
 
                     <button
                         onClick={startGame}
-                        className="bg-[#4a0e0e] text-[#f0e6d2] px-8 py-3 rounded text-lg font-bold
-                     hover:bg-[#681414] hover:scale-105 transform transition-all shadow-lg
-                     border-2 border-[#c5a059]"
+                        className="btn-primary px-10 py-4 text-xl font-bold tracking-widest
+                     hover:scale-105 transform transition-all shadow-xl rounded-sm"
                     >
                         Enter The Leaky Cauldron
                     </button>

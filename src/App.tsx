@@ -11,19 +11,23 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen py-8 md:py-16">
-      <h1 className="text-center text-5xl font-magic text-[#c5a059] mb-4">
-        The Alchemist's London
-      </h1>
-      <p className="text-center text-[#f0e6d2] opacity-60 mb-12 font-serif italic text-lg">
-        "Find the 12 hidden letters to form the password..."
-      </p>
+    <div className="min-h-screen py-8 md:py-16 selection:bg-[var(--color-gold)] selection:text-black">
+      <header className="mb-20 text-center relative z-10">
+        <h1 className="text-6xl md:text-7xl font-magic text-center mb-6 tracking-wide drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
+          <span className="text-gradient-gold">The Alchemist's London</span>
+        </h1>
+        <p className="text-center text-[var(--color-text-muted)] opacity-80 font-serif italic text-xl tracking-wider">
+          "Find the 12 hidden letters to form the password..."
+        </p>
+      </header>
 
-      <MapGrid />
-      <FinalVault />
+      <div className="max-w-[1400px] mx-auto px-4">
+        <MapGrid />
+        <FinalVault />
+      </div>
 
-      <footer className="text-center text-gray-600 mt-24 text-sm font-sans">
-        Built with magic (and Vite)
+      <footer className="text-center text-[var(--color-text-muted)] mt-32 text-sm font-sans opacity-40 hover:opacity-100 transition-opacity">
+        Built with magic
       </footer>
     </div>
   );

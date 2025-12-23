@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGame } from '../context/GameContext';
-import { Key } from 'lucide-react';
+import { Key, Sparkles } from 'lucide-react';
 
 export const FinalVault: React.FC = () => {
     const { solvedRiddles, attemptVault, isGameWon } = useGame();
@@ -10,16 +10,20 @@ export const FinalVault: React.FC = () => {
     // If game is won, show victory
     if (isGameWon) {
         return (
-            <div className="mt-12 p-8 bg-gradient-to-r from-[var(--color-gold)] to-[#f0e6d2] rounded-lg shadow-glow text-center animate-fade-in text-[#2a2a2a]">
-                <h2 className="text-4xl font-magic mb-4 text-[#4a0e0e]">
+            <div className="mt-12 p-12 glass-panel relative overflow-hidden text-center animate-fade-in">
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-gold-dim)]/20 to-transparent pointer-events-none" />
+
+                <h2 className="text-5xl font-magic mb-6 text-gradient-gold drop-shadow-lg relative z-10">
                     The Golden Snitch Opens!
                 </h2>
-                <p className="text-xl mb-6 font-serif">
+                <div className="h-px w-32 bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent mx-auto mb-8"></div>
+
+                <p className="text-xl mb-8 font-serif text-[var(--color-text)] leading-relaxed relative z-10">
                     You have successfully navigated the history of London.
                     <br />
                     Platform 9 ¾ awaits you at King's Cross.
                 </p>
-                <div className="text-6xl animate-bounce">
+                <div className="text-7xl animate-float filter drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">
                     ⚡🚂🦉
                 </div>
             </div>
@@ -35,64 +39,63 @@ export const FinalVault: React.FC = () => {
     };
 
     return (
-        <div className="mt-16 glass-panel p-8 text-center relative overflow-hidden">
+        <div className="mt-20 glass-panel p-10 text-center relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,0,0,0.6)]">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent opacity-50"></div>
 
-            <div className="flex items-center justify-center gap-2 mb-6 text-[var(--color-gold)]">
-                <Key size={24} />
-                <h2 className="text-2xl font-heading m-0 text-white">The Final Vault</h2>
-                <Key size={24} className="transform scale-x-[-1]" />
+            <div className="flex items-center justify-center gap-4 mb-8">
+                <Key size={28} className="text-[var(--color-gold)] animate-pulse-glow" />
+                <h2 className="text-3xl font-heading m-0 text-gradient-gold tracking-widest uppercase">The Final Vault</h2>
+                <Key size={28} className="transform scale-x-[-1] text-[var(--color-gold)] animate-pulse-glow" />
             </div>
 
-            <p className="mb-8 text-gray-300">
-                Combine the 12 letters in order to reveal the password.
+            <p className="mb-10 text-[var(--color-text-muted)] font-serif italic text-lg">
+                Combine the 12 hidden letters to reveal the password.
             </p>
 
             {/* Progress Slots */}
-            <div className="flex justify-center gap-1 md:gap-2 mb-8 flex-wrap">
+            <div className="flex justify-center gap-2 md:gap-3 mb-10 flex-wrap">
                 {Array.from({ length: 12 }).map((_, i) => {
                     const isUnlocked = solvedRiddles.includes(i + 1);
                     return (
                         <div
                             key={i}
                             className={`
-                w-8 h-10 md:w-10 md:h-12 border rounded flex items-center justify-center font-bold
-                transition-all duration-500
-                ${isUnlocked
-                                    ? 'bg-[var(--color-gold)] text-[#2a2a2a] border-[var(--color-gold)] shadow-[0_0_10px_var(--color-gold)]'
-                                    : 'bg-black/30 border-[#444] text-gray-600'}
-              `}
+                                w-10 h-14 md:w-12 md:h-16 border rounded-md flex items-center justify-center font-bold text-lg
+                                transition-all duration-500 relative overflow-hidden
+                                ${isUnlocked
+                                    ? 'bg-[var(--color-gold)] text-[#2a0808] border-[var(--color-gold)] shadow-[0_0_15px_var(--color-gold)] scale-105'
+                                    : 'bg-black/40 border-white/10 text-gray-700'}
+                            `}
                         >
+                            {isUnlocked && <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />}
                             {isUnlocked ? '?' : i + 1}
                         </div>
                     );
                 })}
             </div>
 
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                <div className="relative">
+            <form onSubmit={handleSubmit} className="max-w-xl mx-auto relative z-10">
+                <div className="relative mb-8 group">
                     <input
                         type="text"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="ENTER THE PASSWORD"
                         className={`
-              w-full bg-[#111] border-2 px-6 py-4 text-center text-xl tracking-[0.2em] font-bold text-[var(--color-gold)]
-              rounded focus:outline-none focus:border-[var(--color-gold)] uppercase placeholder:text-gray-700
-              transition-all
-              ${error ? 'border-[var(--color-error)] text-[var(--color-error)] animate-[shake_0.4s_ease-in-out]' : 'border-[#444]'}
-            `}
+                            w-full input-magic px-8 py-5 text-center text-2xl tracking-[0.3em] font-bold rounded-lg
+                            uppercase placeholder:text-white/10 placeholder:tracking-normal placeholder:font-normal
+                            ${error ? 'border-[var(--color-error)] text-[var(--color-error)] animate-[shake_0.4s_ease-in-out]' : ''}
+                        `}
                     />
+                    <div className="absolute inset-0 rounded-lg bg-[var(--color-gold)] opacity-0 group-hover:opacity-5 transition-opacity pointer-events-none"></div>
                 </div>
 
                 <button
                     type="submit"
-                    className="mt-6 px-12 py-3 bg-gradient-to-r from-[#4a0e0e] to-[#681414] 
-                   text-[#f0e6d2] font-heading font-bold rounded shadow-lg
-                   hover:scale-105 active:scale-95 transition-all
-                   border border-[#c5a059]"
+                    className="btn-primary px-16 py-4 text-lg font-bold tracking-widest flex items-center justify-center gap-3 mx-auto group"
                 >
-                    Unlock the Time Spell
+                    <span>Unlock the Time Spell</span>
+                    <Sparkles className="text-[var(--color-gold)] group-hover:animate-spin" size={20} />
                 </button>
             </form>
         </div>
