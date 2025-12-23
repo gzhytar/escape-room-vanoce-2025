@@ -14,7 +14,7 @@ export const FinalVault: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-gold-dim)]/20 to-transparent pointer-events-none" />
 
                 <h2 className="text-5xl font-magic mb-6 text-gradient-gold drop-shadow-lg relative z-10">
-                    The Golden Snitch Opens!
+                    London Calling!
                 </h2>
                 <div className="h-px w-32 bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent mx-auto mb-8"></div>
 
@@ -23,8 +23,12 @@ export const FinalVault: React.FC = () => {
                     <br />
                     Platform 9 ¾ awaits you at King's Cross.
                 </p>
-                <div className="text-7xl animate-float filter drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">
-                    ⚡🚂🦉
+                <div className="relative z-10 max-w-2xl mx-auto">
+                    <img
+                        src="/LondonsCallingJaroLeto2026.jpg"
+                        alt="London's Calling - Jaro Leto 2026"
+                        className="w-full h-auto rounded-lg shadow-2xl animate-float filter drop-shadow-[0_0_20px_rgba(255,215,0,0.3)]"
+                    />
                 </div>
             </div>
         );

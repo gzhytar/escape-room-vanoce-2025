@@ -57,7 +57,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 6,
     title: "The Wand Maker",
-    description: "In a dusty shop in Diagon Alley, I remember every wand I’ve ever sold. I am O_ _ _ _ _ _ _ _ _. Take my first letter.",
+    description: "In a dusty shop in Diagon Alley, I remember every wand I’ve ever sold. I am _ _ _ _ _ _ _ _ _ _.",
     clue: "Letter 6: _",
     validAnswers: ["ollivander", "ollivanders", "garrick ollivander"],
     rewardLetter: "O",
@@ -66,7 +66,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 7,
     title: "The Tower Guardians",
-    description: "Legend says if we ever leave the Tower of London, the Kingdom will fall. We are the large black birds known as R_ _ _ _ _. Take our first letter.",
+    description: "Legend says if we ever leave the Tower of London, the Kingdom will fall. We are the large black birds.",
     clue: "Letter 7: _",
     validAnswers: ["ravens", "the ravens", "raven"],
     rewardLetter: "R",
@@ -75,7 +75,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 8,
     title: "The Ordinary Folk",
-    description: "In the wizarding world, this is what you call those who possess no magic. It starts with an M.",
+    description: "In the wizarding world, this is what you call those who possess no magic.",
     clue: "Letter 8: _",
     validAnswers: ["muggle", "muggles"],
     rewardLetter: "M",
@@ -84,7 +84,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 9,
     title: "The Purple Ride",
-    description: "I am a triple-decker bus for the stranded witch or wizard. Just stick out your wand hand. I am the N_ _ _ _ Bus.",
+    description: "I am a triple-decker bus for the stranded witch or wizard. Just stick out your wand hand. I am the _ _ _ _ _ Bus.",
     clue: "Letter 9: _",
     validAnswers: ["night", "knight", "knight bus", "the knight bus"],
     rewardLetter: "N",
@@ -93,7 +93,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 10,
     title: "The Unseen Gift",
-    description: "One of the three Deathly Hallows, I allow the wearer to walk unseen through the halls of Hogwarts. I am the I_ _ _ _ _ _ _ _ _ _ _ Cloak.",
+    description: "One of the three Deathly Hallows, I allow the wearer to walk unseen through the halls of Hogwarts. I am the _ _ _ _ _ _ _ _ _ _ _ _ Cloak.",
     clue: "Letter 10: _",
     validAnswers: ["invisibility", "invisibility cloak", "the invisibility cloak"],
     rewardLetter: "I",
@@ -102,7 +102,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 11,
     title: "The Admiral’s Square",
-    description: "I stand atop a tall column in Trafalgar Square, guarded by four bronze lions. My name is Admiral N_ _ _ _ _.",
+    description: "I stand atop a tall column in Trafalgar Square, guarded by four bronze lions. My name is Admiral _ _ _ _ _ _.",
     clue: "Letter 11: _",
     validAnswers: ["nelson", "horatio nelson", "admiral nelson"],
     rewardLetter: "N",
@@ -111,7 +111,7 @@ export const RIDDLES: Riddle[] = [
   {
     id: 12,
     title: "The Clock’s Keeper",
-    description: "While many call me Big Ben, that is just my bell. I am actually the E_ _ _ _ _ _ _ _ Tower.",
+    description: "While many call me Big Ben, that is just my bell. I am actually the _ _ _ _ _ _ _ _ _ Tower.",
     clue: "Letter 12: _",
     validAnswers: ["elizabeth", "elizabeth tower", "the elizabeth tower", "st stephens tower"],
     rewardLetter: "E",

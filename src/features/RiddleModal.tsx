@@ -135,11 +135,6 @@ export const RiddleModal: React.FC<RiddleModalProps> = ({ riddle, onClose }) => 
                         </div>
                     )}
                 </div>
-
-                {/* Footer Clue */}
-                <div className="bg-black/40 p-4 text-center text-sm font-mono text-[var(--color-gold-dim)] border-t border-[var(--color-gold-dim)]/20">
-                    {riddle.clue}
-                </div>
             </div>
         </div>
     );
