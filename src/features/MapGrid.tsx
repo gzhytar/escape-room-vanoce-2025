@@ -20,6 +20,9 @@ export const MapGrid: React.FC = () => {
                 <p className="text-[var(--color-text-muted)] text-lg max-w-xl mx-auto font-serif">
                     Explore the city. Solve the riddles to collect the letters.
                 </p>
+                <p className="text-[var(--color-christmas-red)] text-base max-w-xl mx-auto font-serif mt-2 opacity-80">
+                    ❄️ Winter magic fills the streets of London ❄️
+                </p>
                 <div className="mt-4 inline-flex items-center px-4 py-1 rounded-full border border-[var(--color-gold-dim)] bg-black/40 text-[var(--color-gold)] font-mono text-sm">
                     Progress: {solvedRiddles.length} / 12
                 </div>

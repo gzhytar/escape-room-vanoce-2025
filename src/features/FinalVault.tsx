@@ -10,8 +10,22 @@ export const FinalVault: React.FC = () => {
     // If game is won, show victory
     if (isGameWon) {
         return (
-            <div className="mt-12 p-12 glass-panel relative overflow-hidden text-center animate-fade-in">
+            <div className="mt-12 p-12 glass-panel frost-effect relative overflow-hidden text-center animate-fade-in">
                 <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-gold-dim)]/20 to-transparent pointer-events-none" />
+
+                {/* Christmas Victory Decorations */}
+                <div className="absolute top-4 left-4 text-4xl opacity-70" style={{ animation: 'twinkle 1.5s ease-in-out infinite' }}>
+                    🎄
+                </div>
+                <div className="absolute top-4 right-4 text-4xl opacity-70" style={{ animation: 'twinkle 1.5s ease-in-out infinite', animationDelay: '0.5s' }}>
+                    🎁
+                </div>
+                <div className="absolute bottom-4 left-4 text-4xl opacity-70" style={{ animation: 'twinkle 1.5s ease-in-out infinite', animationDelay: '1s' }}>
+                    ⭐
+                </div>
+                <div className="absolute bottom-4 right-4 text-4xl opacity-70" style={{ animation: 'twinkle 1.5s ease-in-out infinite', animationDelay: '1.5s' }}>
+                    🎅
+                </div>
 
                 <h2 className="text-5xl font-magic mb-6 text-gradient-gold drop-shadow-lg relative z-10">
                     London Calling!
@@ -26,10 +40,13 @@ export const FinalVault: React.FC = () => {
                     />
                 </div>
 
-                <p className="text-xl mb-8 font-serif text-[var(--color-text)] leading-relaxed relative z-10">
+                <p className="text-xl mb-4 font-serif text-[var(--color-text)] leading-relaxed relative z-10">
                     You have successfully navigated the history of London.
                     <br />
                     Platform 9 ¾ awaits you at King's Cross.
+                </p>
+                <p className="text-2xl font-serif text-[var(--color-christmas-red)] leading-relaxed relative z-10">
+                    🎄 Merry Christmas! 🎅
                 </p>
             </div>
         );
@@ -44,8 +61,16 @@ export const FinalVault: React.FC = () => {
     };
 
     return (
-        <div className="mt-20 glass-panel p-10 text-center relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,0,0,0.6)]">
+        <div className="mt-20 glass-panel frost-effect p-10 text-center relative overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,0,0,0.6)]">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--color-gold)] to-transparent opacity-50"></div>
+
+            {/* Christmas Decorations on Vault */}
+            <div className="absolute top-4 left-1/4 text-2xl opacity-50" style={{ animation: 'twinkle 2s ease-in-out infinite' }}>
+                ❄️
+            </div>
+            <div className="absolute top-4 right-1/4 text-2xl opacity-50" style={{ animation: 'twinkle 2s ease-in-out infinite', animationDelay: '1s' }}>
+                ❄️
+            </div>
 
             <div className="flex items-center justify-center gap-4 mb-8">
                 <Key size={28} className="text-[var(--color-gold)] animate-pulse-glow" />
