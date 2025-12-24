@@ -40,7 +40,7 @@ export const Intro: React.FC = () => {
                     </h2>
 
                     <h1 className="text-5xl md:text-6xl font-bold mb-8 font-magic text-gradient-gold drop-shadow-lg leading-tight mt-4">
-                        The Alchemist's London
+                        The Alchemist's Christmas Quest
                     </h1>
 
                     <div className="text-xl leading-relaxed mb-10 font-body text-gray-300 italic">
@@ -49,6 +49,9 @@ export const Intro: React.FC = () => {
                         </p>
                         <p className="text-[var(--color-text)] font-semibold">
                             Find the 12 hidden letters to form the password for the Golden Snitch.
+                        </p>
+                        <p className="text-[var(--color-gold)] font-bold mt-4 animate-pulse">
+                            ⚠️ You have 30 minutes to complete your quest! ⚠️
                         </p>
                         <p className="text-[var(--color-christmas-red)] font-semibold mt-4 text-lg">
                             🎅 A Christmas Adventure Awaits! 🎄

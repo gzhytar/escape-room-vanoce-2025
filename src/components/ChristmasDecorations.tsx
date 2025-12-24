@@ -11,7 +11,7 @@ export const ChristmasDecorations: React.FC = () => {
             </div>
 
             {/* Top right corner - Ornament */}
-            <div className="fixed top-4 right-4 z-40 pointer-events-none">
+            <div className="fixed top-24 right-4 z-40 pointer-events-none">
                 <div className="text-4xl animate-float drop-shadow-lg" style={{ animationDelay: '1s' }}>
                     🎁
                 </div>

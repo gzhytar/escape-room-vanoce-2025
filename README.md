@@ -1,4 +1,4 @@
-# The Alchemist's London
+# The Alchemist's Christmas Quest
 
 An interactive text-based escape room game built with React, Vite, and TailwindCSS.
 
